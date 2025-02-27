@@ -1,0 +1,9 @@
+git checkout -- . Restaura la version al último commit
+
+git add <nombreDelArchivo> Para agregar un archivo a stage
+
+git status entrega información de la rama donde estamos trabajando
+
+git branch  entrega el nombre de la rama en la que estamos trabajando
+
+git branch -m master main  Para cambiar el nombre de la rama master a main
