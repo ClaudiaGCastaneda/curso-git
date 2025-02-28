@@ -39,8 +39,9 @@ const commandsRemote = [
     {name:"git remote -v", description:"Lista los origines que tenemos registrados"},
     {name:"git clone <urlDelRepositorio>", description:"Para clonar un repositorio "},
     {name:"git push", description:"Para subir cambios de local a repositorio remoto"},
-    {name:"git config pull.rebase true", description:"Para habilitar el modo interactivo si no e sposible hacer fast forward cuando descargamos cambios de origen"},
-    {name:"git rebase --continue", description:"Permite concluir con los cambios para hacer rebase"}
+    {name:"git config --global pull.rebase true", description:"Para habilitar el modo interactivo si no e sposible hacer fast forward cuando descargamos cambios de origen"},
+    {name:"git rebase --continue", description:"Permite concluir con los cambios para hacer rebase ya que hemos terminado de ajustar los conflictos manuamente en local"},
+
 ];
 
 const commandsTags = [
@@ -69,12 +70,18 @@ const commandsStash = [
 const commandsRebase = [
     {name:"git rebase master", descripcion:"Se ejecuta mientras estamos en la rama diferente a master y coloca nuestros commits como si fueran los m{as recientes"},
     {name:"git rebase -i HEAD~4", descripcion:"Para entrar en modo interactivo a unificar commits mientras los cambios no han salido del ambiente local. El n{umero 4 indica el n{umero de commits anteriores sobre los que queremos trabajar"},
-    {name:"", descripcion:""},
+    {name:"git fetch", descripcion:"Para actualizar las referencias de las ramas en el repositorio local"},
     {name:"", descripcion:""},
     {name:"", descripcion:""},
     {name:"", descripcion:""},
 ];
 
+
+const urls = [
+    {goal:"Aprender marckdown", url:"\"https://www.markdowntutorial.com/\""},
+    {goal:"Github pull request flow", url:"https://blog.mergify.com/understanding-the-github-pull-request-workflow/"}
+    
+];
 
 
 commands.forEach(command => console.log(command.name+ " - " +command.description));
