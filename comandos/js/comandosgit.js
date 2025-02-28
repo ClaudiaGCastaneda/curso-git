@@ -32,12 +32,16 @@ const commands = [
     {name:"git branch -d <nombreDeLaRama>", description:"Para borrar una rama"},
     {name:"git branch -d <nombreDeLaRama> -f", description:"Para borrar una rama a pesar de que no se hayan integrado sus cambios"},
     {name:"git checkout -b <nombreDeLaRama>", description:"Crea una rama y nos mueve a esa rama"},
-    {name:"git remote -v", description:"Lista los origines que tenemos registrados"},
-    {name:"git clone <urlDelRepositorio>", description:"Para clonar un repositorio "},
-    {name:"", description:""},
+
     {name:"", description:""},
 ];
-const commandsMerge = [];
+const commandsRemote = [
+    {name:"git remote -v", description:"Lista los origines que tenemos registrados"},
+    {name:"git clone <urlDelRepositorio>", description:"Para clonar un repositorio "},
+    {name:"git push", description:"Para subir cambios de local a repositorio remoto"},
+    {name:"git config pull.rebase true", description:"Para habilitar el modo interactivo si no e sposible hacer fast forward cuando descargamos cambios de origen"},
+    {name:"git rebase --continue", description:"Permite concluir con los cambios para hacer rebase"}
+];
 
 const commandsTags = [
     {name:"git tag <nombreDelTag>", description:"Para crear un tag"},
