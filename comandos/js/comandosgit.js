@@ -25,15 +25,15 @@ const commands = [
     {name:"git mv <nombreDelArchivo> <nuevoNombreDelArchivo>", description:"Renombra un archivo"},
     {name:"git rm <nombreDelArchivo>", description:"Para eliminar un archivo"},
     {name:"git reset --hard", description:"Es equivalente a git checkout -- . "},
-    {name:"git branch <nombreDeLaRama>", description:"Par crear una rama"},
+    {name:"git branch <nombreDeLaRama>", description:"Para crear una rama"},
     {name:"git branch", description:"Para listar las ramas"},
     {name:"git checkout <nombreDeLaRama>", description:"Ir a una rama"},
     {name:"git merge <nombreDeLaRama>", description:"Para unir una rama <nombreDeLaRama> a la rama donde me encuentro"},
     {name:"git branch -d <nombreDeLaRama>", description:"Para borrar una rama"},
     {name:"git branch -d <nombreDeLaRama> -f", description:"Para borrar una rama a pesar de que no se hayan integrado sus cambios"},
     {name:"git checkout -b <nombreDeLaRama>", description:"Crea una rama y nos mueve a esa rama"},
-    {name:"", description:""},
-    {name:"", description:""},
+    {name:"git remote -v", description:"Lista los origines que tenemos registrados"},
+    {name:"git clone <urlDelRepositorio>", description:"Para clonar un repositorio "},
     {name:"", description:""},
     {name:"", description:""},
 ];
@@ -46,9 +46,9 @@ const commandsTags = [
     {name:"git tag", description:"Listar los tags"},
     {name:"git tag -a v0.0.1 <HashCorto>", description:"Para generar un tag de un commit específico"},
     {name:"git show <nombreDelTag>", descripcion:"Muestra los detalles del tag"},
-    {name:"", descripcion:""},
-    {name:"", descripcion:""},
-
+    {name:"git push --tags", descripcion:"Para subir los tags al repositorio remoto"},
+    {name:"git pull", descripcion:"Para descargar los últimos cambios del repositorio"},
+    {name:"git pull origin main", descripcion:"Es igual al comando git pull y es para descargar los últimos cambios del repositorio"},
 ];
 
 const commandsStash = [
@@ -91,8 +91,11 @@ notas.push("Rebase se utiliza para unir o separar commits, para reorganizar");
 notas.push("Rebase actualiza la base de código sobre la que estamos trabajando");
 notas.push("Rebase squash funciona para unir commits");
 notas.push("Rebase reword para cambiar el nombre de un commit, primero indicamos con un r que queremos modificar los mensajes y en la siguiente ventana podemos actualizar")
+notas.push("Para crear un origen remoto: git remote add origin <urlDelRepositorio>");
+notas.push("Para renombrar la rama Master a main: git branch -M main ");
+notas.push("Para subir nuestros cambios en local al repositorio por primerz vez: git push -u origin main");
+notas.push("Los tags deben subirse por separado con git push --tags");
 notas.push("");
-
 
 notas.forEach((nota, index) => console.log(nota, index));
 
