@@ -59,14 +59,12 @@ const commandsStash = [
     {name:"git stash apply <nombreDelStash>", descripcion:"Rcupera los cambios de un stash particular"},
     {name:"git stash drop <nombreDelStash>", descripcion:"Borra el stash indicado en el nombre"},
     {name:"git stash show <nombreDelStash>", descripcion:"Muestra los detalles del stash"},
-    {name:"git stash save <nombreDelStash>", descripcion:"Para crear un stash con un nombre"},
-    {name:"", descripcion:""},
-    {name:"", descripcion:""},
+    {name:"git stash save <nombreDelStash>", descripcion:"Para crear un stash con un nombre"}
 ];
 
 const commandsRebase = [
     {name:"git rebase master", descripcion:"Se ejecuta mientras estamos en la rama diferente a master y coloca nuestros commits como si fueran los m{as recientes"},
-    {name:"git rebase -i ", descripcion:"Para unificar commits"},
+    {name:"git rebase -i HEAD~4", descripcion:"Para entrar en modo interactivo a unificar commits mientras los cambios no han salido del ambiente local. El n{umero 4 indica el n{umero de commits anteriores sobre los que queremos trabajar"},
     {name:"", descripcion:""},
     {name:"", descripcion:""},
     {name:"", descripcion:""},
@@ -91,7 +89,9 @@ notas.push("v1.0.0 Indica una version mayor, el segundo número es una nueva fun
 notas.push("Stash mantiene los cambios que no han sido subidos a stage o commit de manera segura y temporal");
 notas.push("Rebase se utiliza para unir o separar commits, para reorganizar");
 notas.push("Rebase actualiza la base de código sobre la que estamos trabajando");
-
+notas.push("Rebase squash funciona para unir commits");
+notas.push("Rebase reword para cambiar el nombre de un commit, primero indicamos con un r que queremos modificar los mensajes y en la siguiente ventana podemos actualizar")
+notas.push("");
 
 
 notas.forEach((nota, index) => console.log(nota, index));
